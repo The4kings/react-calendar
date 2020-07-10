@@ -48,8 +48,8 @@ import './Calendar.css';
     }
 
     nextMonth () {      
-        const {date} = this.state;
-        let date_ = date;  
+        
+        let date_ = this.state.date;  
         
         let a = date_.getMonth()+1; 
         date_ = date_.setMonth(a);
@@ -58,8 +58,8 @@ import './Calendar.css';
     }
 
     prevMonth = () => {
-        const {date} = this.state;
-        let date_ = date;  
+        
+        let date_ = this.state.date;  
         
         let a = date_.getMonth()-1; 
         date_ = date_.setMonth(a);
@@ -78,7 +78,7 @@ import './Calendar.css';
         let popup = props.data.map((data) => {
             return (
                 <div key={data}>
-                    <a href="nothing" onClick={(e)=> {this.onSelectChange(e, data)}}>
+                    <a href="#" onClick={(e)=> {this.onSelectChange(e, data)}}>
                         {data}
                     </a>
                 </div>
